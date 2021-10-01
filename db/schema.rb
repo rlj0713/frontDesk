@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_01_023445) do
+ActiveRecord::Schema.define(version: 2021_10_01_033127) do
+
+  create_table "guides", force: :cascade do |t|
+    t.text "guide_first_name"
+    t.text "guide_last_name"
+    t.integer "reservation_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "reservations", force: :cascade do |t|
     t.text "guest_first_name"
     t.text "guest_last_name"
-    t.text "guest_email"
-    t.integer "number_of_guests"
-    t.boolean "full_day"
-    t.boolean "half_day"
-    t.boolean "am"
-    t.boolean "pm"
-    t.text "discipline"
-    t.text "notes"
     t.integer "guide_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
