@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Reservation.create(guest_first_name: 'John', guest_last_name: 'Doe', guest_email: 'jdoe123@gmail.com', number_of_guests: 2, trip_date: DateTime.new(2020, 7, 13), location: "Brown's Canyon", full_day: false, half_day: true, am: true, pm: false, discipline: 'rafting', notes: "Father and son - want to see Brown's and are willing to combine with others.")
 
-
-Reservation.create(guest_first_name: 'Joe', guest_last_name: 'Doe', guide_id: 1)
-Guide.create(guide_first_name: 'Brad', guide_last_name: 'Chadlley', reservation_id: 1)
+Guide.create(first_name: 'Brad', last_name: 'Chadlley')
+Customer.create(first_name: 'Joe', last_name: 'Shmo')
+Reservation.create(guide_id: 1, customer_id: 1)

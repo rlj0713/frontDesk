@@ -1,3 +1,4 @@
 class Guide < ActiveRecord::Base
-    has_and_belongs_to_many :reservations
+    has_many :reservations
+    has_many :guests, through: :reservations
 end
